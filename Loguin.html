@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plataforma de Cursos Online</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    @layer base {
+      :root {
+        --color-primary: #ff8c00;--color-secondary: #ffc107;--color-accent: #00bcd4;--background-light: #fffbeb;--background-dark: #2d3748;--text-light: #f7fafc;--text-dark: #2d3748;}
+    }
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: var(--background-light);
+      color: var(--text-dark);
+    }
+    .dark body {
+      background-color: var(--background-dark);
+      color: var(--text-light);
+    }
+    .form-input {
+        @apply block w-full px-4 py-3 rounded-lg bg-white/80 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 shadow-sm placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all duration-300 ease-in-out;
+    }
+    .form-input:focus {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+    .btn {
+        @apply w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-lg text-sm font-bold text-white transition-all duration-300 ease-in-out;
+    }
+    .btn-primary {
+        @apply bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] hover:from-[var(--color-secondary)] hover:to-[var(--color-primary)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary)];
+    }
+    .btn-secondary {
+        @apply bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-accent)];
+    }
+    .role-selector input[type="radio"]:checked + label {
+      border-color: var(--color-primary);
+      background-color: #ff8c0020;
+      box-shadow: 0 0 0 2px var(--color-primary);
+      transform: scale(1.05);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased">
+<div class="flex flex-col justify-center min-h-screen px-4 py-12 sm:px-6 lg:px-8 bg-cover bg-center" style="background-image: linear-gradient(to top right, #6D28D9, #DB2777);">
+<div class="sm:mx-auto sm:w-full sm:max-w-md">
+<h1 class="text-center text-4xl font-extrabold text-white">
+        Únete a la Aventura
+      </h1>
+<p class="mt-2 text-center text-sm text-gray-200 dark:text-gray-300">
+        Crea tu cuenta o inicia sesión para explorar.
+      </p>
+</div>
+<div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+<div class="bg-white/10 dark:bg-gray-800/10 backdrop-blur-lg py-8 px-4 shadow-2xl rounded-xl sm:px-10">
+<form action="#" class="space-y-6" method="POST">
+<div>
+<label class="block text-sm font-medium text-gray-200 dark:text-gray-200" for="email">
+              Correo electrónico
+            </label>
+<div class="mt-1">
+<input autocomplete="email" class="form-input bg-white/20 dark:bg-gray-700/30 text-white placeholder-gray-300 dark:placeholder-gray-400" id="email" name="email" placeholder="tu@email.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-200 dark:text-gray-200" for="password">
+              Contraseña
+            </label>
+<div class="mt-1">
+<input autocomplete="current-password" class="form-input bg-white/20 dark:bg-gray-700/30 text-white placeholder-gray-300 dark:placeholder-gray-400" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<div class="role-selector">
+<span class="block text-sm font-medium text-gray-200 dark:text-gray-200 mb-2">Selecciona tu rol</span>
+<div class="grid grid-cols-2 gap-4">
+<input checked="" class="sr-only" id="role-user" name="role" type="radio" value="user"/>
+<label class="cursor-pointer w-full py-4 px-2 inline-flex flex-col justify-center items-center gap-2 rounded-lg border-2 border-gray-400/50 dark:border-gray-600/50 font-semibold text-gray-200 dark:text-gray-300 hover:border-white focus:outline-none transition-all duration-300 ease-in-out" for="role-user">
+<span class="material-symbols-outlined text-3xl text-white">school</span>
+<span>Usuario</span>
+</label>
+<input class="sr-only" id="role-instructor" name="role" type="radio" value="instructor"/>
+<label class="cursor-pointer w-full py-4 px-2 inline-flex flex-col justify-center items-center gap-2 rounded-lg border-2 border-gray-400/50 dark:border-gray-600/50 font-semibold text-gray-200 dark:text-gray-300 hover:border-white focus:outline-none transition-all duration-300 ease-in-out" for="role-instructor">
+<span class="material-symbols-outlined text-3xl text-white">history_edu</span>
+<span>Instructor</span>
+</label>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<input class="h-4 w-4 text-[var(--color-primary)] bg-gray-100/30 border-gray-300/50 rounded focus:ring-[var(--color-primary)]" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-200 dark:text-gray-200" for="remember-me">
+                Recuérdame
+              </label>
+</div>
+<div class="text-sm">
+<a class="font-medium text-white hover:text-[var(--color-secondary)]" href="#">
+                ¿Olvidaste tu contraseña?
+              </a>
+</div>
+</div>
+<div>
+<button class="btn btn-primary" type="submit">
+              Iniciar Sesión
+            </button>
+</div>
+<div class="relative">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-gray-400/50 dark:border-gray-600/50"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-2 bg-gradient-to-t from-[#6d28d9]/10 to-[#db2777]/10 backdrop-blur-lg text-gray-300 dark:text-gray-400">
+                  ¿Aún no tienes cuenta?
+                </span>
+</div>
+</div>
+<div>
+<button class="btn btn-secondary bg-white/20 text-white border-none hover:bg-white/30" type="button">
+              Crear una cuenta
+            </button>
+</div>
+</form>
+<p class="mt-6 text-center text-xs text-gray-300 dark:text-gray-400">
+          Al continuar, aceptas nuestros <a class="font-medium text-white hover:text-[var(--color-secondary)]" href="#">Términos de Servicio</a> y <a class="font-medium text-white hover:text-[var(--color-secondary)]" href="#">Política de Privacidad</a>.
+        </p>
+</div>
+</div>
+</div>
+
+</body></html>
