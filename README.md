@@ -21,4 +21,4 @@ Proyecto de la asignatura *Desarrollo orientado a plataformas*, Universidad de P
 
 ## Otros proyectos
 
-Mis proyectos más recientes están en mi portafolio: [carlosescam.github.io](https://carlosescam.github.io).
+Mis proyectos más recientes están en mi portafolio: [carlosescamilla.me](https://carlosescamilla.me).
